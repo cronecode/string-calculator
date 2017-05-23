@@ -49,5 +49,14 @@ RSpec.describe StringCalculator do
 
       expect(output).to eq(3)
     end
+
+    it "ignores negative numbers" do
+      input = "1,-2,3"
+
+      output = subject.add(input)
+
+      expect(output).to eq(4)
+    end
+
   end
 end
