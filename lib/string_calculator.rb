@@ -7,6 +7,6 @@ module StringCalculator
       .split(",")
       .map(&:to_i)
       .select { |n| n <= 1000 && n >= 0 }
-      .inject(0) { |sum, n| sum + n }
+      .reduce(0, :+)
   end
 end
