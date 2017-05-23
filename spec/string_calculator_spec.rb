@@ -1,4 +1,4 @@
-StringCalculator = 1
+require('string_calculator')
 
 RSpec.describe StringCalculator do
 
