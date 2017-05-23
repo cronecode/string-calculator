@@ -3,8 +3,7 @@ module StringCalculator
 
   def add(numbers)
     numbers
-      .gsub(/\n/, ",")
-      .split(",")
+      .split(/\n|,/)
       .map(&:to_i)
       .select { |n| n <= 1000 && n >= 0 }
       .reduce(0, :+)
