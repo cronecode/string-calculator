@@ -1,5 +1,7 @@
 module StringCalculator
-  def self.add(number)
-    0
+  extend self
+
+  def add(number)
+    return 0 if number == ""
   end
 end
