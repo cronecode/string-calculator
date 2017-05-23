@@ -2,8 +2,6 @@ module StringCalculator
   extend self
 
   def add(numbers)
-    return 0 if numbers == ""
-
     numbers
       .gsub(/\n/, ",")
       .split(",")
