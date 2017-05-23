@@ -6,6 +6,10 @@ module StringCalculator
 
     numbers = numbers.split(",")
 
-    numbers.inject(0) { |sum, n| sum + n.to_i }
+    numbers = numbers.map { |n| n.to_i }
+
+    numbers = numbers.select { |n| n <= 1000 }
+
+    numbers.inject(0) { |sum, n| sum + n }
   end
 end
