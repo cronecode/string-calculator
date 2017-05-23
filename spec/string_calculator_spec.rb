@@ -17,5 +17,13 @@ RSpec.describe StringCalculator do
 
       expect(output).to eq(1)
     end
+
+    it "adds two numbers" do
+      input = "3,4"
+
+      output = StringCalculator.add(input)
+
+      expect(output).to eq(7)
+    end
   end
 end
