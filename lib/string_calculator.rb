@@ -1,9 +1,11 @@
 module StringCalculator
   extend self
 
-  def add(number)
-    return 0 if number == ""
+  def add(numbers)
+    return 0 if numbers == ""
 
-    number.to_i
+    numbers = numbers.split(",")
+
+    numbers.inject(0) { |sum, n| sum + n.to_i }
   end
 end
