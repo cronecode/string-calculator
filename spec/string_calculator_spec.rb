@@ -41,5 +41,13 @@ RSpec.describe StringCalculator do
 
       expect(output).to eq(10)
     end
+
+    it "ignores newlines" do
+      input = "1\n2"
+
+      output = subject.add(input)
+
+      expect(output).to eq(3)
+    end
   end
 end
