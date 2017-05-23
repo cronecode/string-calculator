@@ -4,9 +4,11 @@ module StringCalculator
   def add(numbers)
     return 0 if numbers == ""
 
-    numbers = numbers.gsub(/\n/, ",").split(",")
-
-    numbers = numbers.map { |n| n.to_i }.select { |n| n <= 1000 && n >= 0 }
+    numbers = numbers
+      .gsub(/\n/, ",")
+      .split(",")
+      .map { |n| n.to_i }
+      .select { |n| n <= 1000 && n >= 0 }
 
     numbers.inject(0) { |sum, n| sum + n }
   end
